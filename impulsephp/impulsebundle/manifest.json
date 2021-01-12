@@ -1,3 +1,8 @@
 {
-    "aliases": ["flex-test", "test-flex"]
+    "bundles": {
+        "Impulse\\ImpulseBundle\\ImpulseBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
 }
