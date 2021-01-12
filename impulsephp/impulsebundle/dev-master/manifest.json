@@ -9,6 +9,6 @@
         "templates/": "templates/"
     },
     "composer-scripts": {
-        "impulse:setup %PUBLIC_DIR%": "symfony-cmd"
+        "impulse:setup": "symfony-cmd"
     }
 }
