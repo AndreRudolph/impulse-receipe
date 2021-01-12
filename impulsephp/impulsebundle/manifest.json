@@ -5,6 +5,7 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
         "src/": "%SRC_DIR%/",
+        "src/Controller": "%SRC_DIR%/Controller",
         "templates/": "%TEMPLATES_DIR%/"
     },
     "composer-scripts": {
