@@ -1,4 +1,5 @@
 {
+    "aliases": ["impulse", "impulse-php", "impulsephp", "impulse-bundle", "impulsebundle"],
     "bundles": {
         "Impulse\\ImpulseBundle\\ImpulseBundle": ["all"]
     },
