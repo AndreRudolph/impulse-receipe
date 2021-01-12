@@ -8,6 +8,6 @@
         "templates/": "%TEMPLATES_DIR%/"
     },
     "composer-scripts": {
-        "impulse:setup": ""
+        "impulse:setup": "symfony-cmd"
     }
 }
