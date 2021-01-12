@@ -1,0 +1,27 @@
+<impulse>
+    <window bind="App\Controller\NavigationController">
+        <div class="container">
+            <div class="navbar navbar-expand-md navbar-light">
+                <button class="navbar-toggler" data-toggle="collapse" data-target=".navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbarNav collapse navbar-collapse">
+                    <div class="navbar-nav ml-auto">
+                        <navbar>
+                            <navitem id="navIndex" target="app/welcome.imp">Home</navitem>
+                            <navitem toggle="true" />
+                            <navgroup>
+                                <navitem>
+                                    <navitem id="navSecuredArea" target="app/secured/index.imp">Secured Area</navitem>
+                                    <navitem id="navLogin" target="auth/login.imp">Login</navitem>
+                                    <navitem id="navLogout"><a class="nav-link" href="logout">Logout</a></navitem>
+                                    <navitem id="navRegistration" target="auth/registration.imp">Registration</navitem>
+                                </navitem>
+                            </navgroup>
+                        </navbar>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </window>
+</impulse>
