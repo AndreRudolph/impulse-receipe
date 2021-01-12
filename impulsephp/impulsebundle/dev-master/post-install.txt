@@ -1,12 +1,12 @@
-<bg=blue;fg=white>                                     </>
-<bg=blue;fg=white>          Impulse setup!             </>
-<bg=blue;fg=white>                                     </>
+<bg=blue;fg=white>                </>
+<bg=blue;fg=white> Impulse setup! </>
+<bg=blue;fg=white>                </>
 
 Please make sure that you insert the following lines at the end to your services.yaml file!
-# impulse related
-App\UI\Components\:
-    resource: '../src/UI/Components'
-    public: true
-    shared: false
-    tags:
-        - { name: 'impulse.components', label: 'app', priority: 0 }
+
+    <bg=orange;fg=white>App\UI\Components\:
+        resource: '../src/UI/Components'
+        public: true
+        shared: false
+        tags:
+            - { name: 'impulse.components', label: 'app', priority: 0 }</>
