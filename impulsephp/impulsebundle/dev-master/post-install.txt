@@ -4,7 +4,7 @@
 
 Please make sure that you insert the following lines at the end to your services.yaml file!
 
-    <bg=orange;fg=white>App\UI\Components\:
+    <bg=yellow;fg=white>App\UI\Components\:
         resource: '../src/UI/Components'
         public: true
         shared: false
