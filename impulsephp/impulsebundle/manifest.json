@@ -6,5 +6,8 @@
         "config/": "%CONFIG_DIR%/",
         "src/": "%SRC_DIR%/",
         "templates/": "%TEMPLATES_DIR%/"
+    },
+    "composer-scripts": {
+        "impulse:setup": ""
     }
 }
