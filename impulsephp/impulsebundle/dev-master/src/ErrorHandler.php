@@ -10,11 +10,11 @@ class ErrorHandler extends ExceptionHandler
     /**
      * Configures the exception visualization handling for non-debug purpose (e.g. production).
      *
-     * @param Throwable $throwable
+     * @param \Throwable $throwable
      *
      * TODO make localization possible!
      */
-    protected function configure(Throwable $throwable): void
+    protected function configure(\Throwable $throwable): void
     {
         $this->customErrorTitle = 'Internal error';
         $this->customErrorMessage = 'An internal error occurred. Please contact the system administrator.';
@@ -26,7 +26,7 @@ class ErrorHandler extends ExceptionHandler
      *
      * @param Throwable $throwable
      */
-    protected function configureDebug(Throwable $throwable): void
+    protected function configureDebug(\Throwable $throwable): void
     {
         $this->includeStackTrace();
     }
