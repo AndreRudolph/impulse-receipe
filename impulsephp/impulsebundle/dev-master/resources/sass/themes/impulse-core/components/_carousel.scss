@@ -1,0 +1,39 @@
+.imp-carousel {
+    & .imp-carousel-items
+    {
+        & .imp-carousel-item {
+            display: none !important;
+
+            &.active {
+                display: block !important;
+            }
+        }
+    }
+
+    & .imp-carousel-control-prev
+    {
+        position: absolute;
+        left: 0;
+        cursor: pointer;
+
+        & .imp-carousel-control-prev-icon {
+        }
+    }
+
+    & .imp-carousel-control-next {
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+
+        & .imp-carousel-control-next-icon {
+        }
+    }
+
+    & .imp-carousel-indicators {
+        list-style-type: none;
+
+        & li::marker {
+            color: red;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.impulse-page-progessbar
+{
+    position: fixed;
+    top: 0; left:
+    0;
+    height: 3px;
+    background-color: rgba(168,208,68, 0.7);
+    z-index: 99999;
+}
+
+.imp-sr-only {
+    @extend .sr-only;
+}

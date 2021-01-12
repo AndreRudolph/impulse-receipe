@@ -1,0 +1,45 @@
+.imp-tabbox {
+    .imp-tabs {
+        @extend .nav-tabs;
+        border-bottom: 1px solid #222;
+
+        .imp-tab {
+            @extend .nav-item;
+            border: none;
+
+            &.active, &.active:hover {
+                font-weight: 500;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid #94b83a;
+                transition: border 1s , font-weight 1.5s;
+            }
+
+            &:hover {
+                border-color: transparent;
+            }
+
+            a {
+                @extend .text-white;
+                @extend .nav-link;
+                font-weight: 400;
+                height: 100%;
+                border: none;
+            }
+        }
+    }
+
+    .imp-tabpanels {
+        @extend .tab-content;
+
+        .imp-tabpanel {
+            @extend .tab-pane;
+            @extend .fade;
+            padding: 5px;
+
+            &.show {
+                @extend .d-block;
+            }
+        }
+    }
+}

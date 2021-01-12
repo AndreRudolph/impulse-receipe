@@ -1,0 +1,4 @@
+.imp-listbox {
+    @extend .table;
+    @extend .table-dark; // this should be removed later
+}

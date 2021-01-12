@@ -5,10 +5,8 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
+        "resources/": "resources/",
         "src/": "%SRC_DIR%/",
         "templates/": "templates/"
-    },
-    "composer-scripts": {
-        "impulse:setup": "symfony-cmd"
     }
 }

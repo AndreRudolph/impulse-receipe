@@ -1,0 +1,23 @@
+.imp-tabbox {
+    .imp-tabs {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+
+        .imp-tab {
+            cursor: pointer;
+        }
+    }
+
+    .imp-tabpanels {
+        .imp-tabpanel {
+            display: none;
+
+            &.show {
+                display: block;
+            }
+        }
+    }
+
+}

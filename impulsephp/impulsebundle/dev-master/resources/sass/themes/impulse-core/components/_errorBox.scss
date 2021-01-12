@@ -1,0 +1,29 @@
+.imp-errorbox {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: rgba(220, 53, 69, 0.9);
+    color: #fff;
+
+    & .imp-errorbox-title {
+        padding: 15px 0 15px 15px;
+        display: flex;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+        & .imp-errorbox-close {
+            color: #fff;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            margin-left: auto;
+            font-size: 32px;
+        }
+    }
+
+    & .imp-errorbox-content {
+        padding: 15px;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,21 @@
+// TODO use same states like notifications
+/**
+ * Defines a map of available states for feedback textbox.
+ */
+$feedback-states-map: (
+    'valid':    ( border: 1px solid rgba(124, 205, 124, 0.9), color: rgba(124, 205, 124, 0.9) ),
+    'invalid':  ( border: 1px solid #dc3545, color: #dc3545 )
+);
+
+.imp-feedback-textbox {
+    @each $state, $map in $feedback-states-map {
+        &.#{$state} {
+            color: map_get(map-get($feedback-states-map, $state), 'color');
+
+            & > .imp-feedback-textbox-input, & > .imp-feedback-textbox-input:focus {
+                border: map_get(map-get($feedback-states-map, $state), 'border');
+                color: map_get(map-get($feedback-states-map, $state), 'color');
+            }
+        }
+    }
+}

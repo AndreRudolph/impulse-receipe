@@ -1,0 +1,167 @@
+// TODO vertical navbar should also be collapsable?
+
+// new
+$collapsing-threshold: 920px !default;
+
+.imp-navbar {
+  display: flex;
+  align-items: center;
+  //padding: 15px 10px 15px 10px;
+
+  &:not(.vertical) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.vertical {
+    display: inline-flex;
+    width: 100%;
+  }
+}
+
+.imp-navbar.vertical {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.imp-navitem {
+  cursor: pointer;
+  margin-right: 15px; // TODO move to impulse-theme
+  padding: 15px 10px 15px 10px; // TODO move to impulse-theme
+}
+
+.imp-navbar.vertical .imp-navitem {
+  width: 100%;
+  padding: 5px 10px 5px 10px; // TODO move to impulse-theme
+}
+
+.imp-navmenu .imp-navitem {
+  margin-right: 0;
+}
+
+.imp-navitem.dropdown {
+  position: relative;
+
+  &:not(.expanded) > span:after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+  }
+}
+
+.imp-navmenu {
+  display: none;
+
+  &.show {
+    position: absolute;
+    display: flex;
+    z-index: 100;
+    flex-direction: column;
+    width: 400px;
+  }
+}
+
+.imp-navbar.vertical {
+  .imp-navmenu {
+    display: none;
+
+    &.show {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+    }
+  }
+}
+
+.imp-navbar.horizontal {
+  .imp-navmenu.show {
+    top: 54px; // TODO this should be replaced by rem logic
+  }
+}
+
+.imp-navitem.expanded .imp-navmenu {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &.show {
+    position: relative;
+  }
+}
+
+// toggle
+.imp-navitem.toggle {
+  display: none;
+
+  & .imp-navbar-toggle-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .menu-icon {
+      display: grid;
+      place-items: center;
+      height: 35px;
+      width: 35px;
+
+      & > span {
+        width: 30px;
+        height: 3px;
+        background: #000;
+        display: block;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}
+
+.imp-navgroup {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.imp-navbar.vertical .imp-navgroup {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: $collapsing-threshold) {
+  .imp-navbar {
+    flex-wrap: wrap;
+  }
+
+  .imp-navitem.toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .imp-navbar.vertical .imp-navitem.toggle {
+    display: none; // TODO this should be visible if collapsable is true, if true, the media query shouldnt work then
+    margin: 0;
+  }
+
+  .imp-navgroup {
+    display: none;
+
+    &.show {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .imp-navbar.vertical .imp-navgroup {
+    display: flex;
+  }
+
+  .imp-navmenu.show {
+    position: relative;
+  }
+}

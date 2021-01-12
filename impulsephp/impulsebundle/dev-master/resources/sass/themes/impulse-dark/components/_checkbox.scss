@@ -1,0 +1,14 @@
+.imp-checkbox {
+    &.imp-checkbox-switch {
+        @extend .custom-switch;
+        @extend .custom-control;
+
+        & .imp-checkbox-input {
+            @extend .custom-control-input;
+        }
+
+        & .imp-checkbox-label {
+            @extend .custom-control-label;
+        }
+    }
+}
