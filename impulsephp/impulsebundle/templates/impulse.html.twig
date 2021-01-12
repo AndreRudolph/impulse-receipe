@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Application</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.12.0/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    {#    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>#}
+
+    <link rel="stylesheet" href="libs/fontawesome-free-5.9.0-web/css/all.min.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round|Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900%7COpen+Sans:400" rel="stylesheet">
+
+
+    <script type="text/javascript" src="{{ asset('bundles/impulse/js/Config.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/impulse/js/impulse-components.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/app-components.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/impulse/js/impulse-core.js') }}"></script>
+
+    <link rel="stylesheet" href="{{ asset('bundles/impulse/css/impulse-theme.css') }}" />
+    <script type="text/javascript" src="{{ asset('js/prism.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('css/prism.css') }}" />
+
+
+    <link rel="stylesheet" href="{{ asset('css/app_v3.css') }}" />
+
+
+    <script type="text/javascript">
+        jQuery(function () {
+            window.onerror = function(msg) {
+                alert("The following error occured: \n\n" + msg);
+            };
+
+            ImpulseConfig.set('baseUrl', '{{ url("_impulse_index") }}');
+            var app = new App();
+            var requestHandler = app.run();
+
+            requestHandler.handleInitialResponse({{ jsResponse|json_encode|raw }});
+        });
+    </script>
+</head>
+<body id="{{ jsResponse.impulse.page.uid }}">
+
+</body>
+</html>
