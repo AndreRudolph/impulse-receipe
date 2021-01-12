@@ -1,9 +1,12 @@
-<bg=green;fg=white>                                     </>
 <bg=blue;fg=white>                                     </>
-<bg=blue;fg=white>             You did it!             </>
-<bg=blue;fg=white>       Your flex server works        </>
+<bg=blue;fg=white>          Impulse setup!             </>
 <bg=blue;fg=white>                                     </>
-<bg=green;fg=white>                                     </>
 
-You are using the i22 symfony recipe repo.
-You should change that and use your own repo.
+Please make sure that you insert the following lines at the end to your services.yaml file!
+# impulse related
+App\UI\Components\:
+    resource: '../src/UI/Components'
+    public: true
+    shared: false
+    tags:
+        - { name: 'impulse.components', label: 'app', priority: 0 }
