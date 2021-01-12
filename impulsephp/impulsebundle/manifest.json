@@ -6,6 +6,7 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
         "src/": "%SRC_DIR%/",
+        "src/ImpulseController.php": "%SRC_DIR%/Controller/ImpulseController.php",
         "templates/": "templates/"
     },
     "composer-scripts": {
