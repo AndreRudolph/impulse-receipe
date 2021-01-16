@@ -12,6 +12,6 @@
         "src/Resources/assets/": "assets/"
     },
     "composer-scripts": {
-        "rm -rf ./assets/": "script"
+        "rm -rf ./assets/*": "script"
     }
 }
