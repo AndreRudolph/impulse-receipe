@@ -7,11 +7,5 @@
         "config/": "%CONFIG_DIR%/",
         "src/": "%SRC_DIR%/",
         "templates/": "templates/"
-    },
-    "copy-from-package": {
-        "src/Resources/assets/": "assets/"
-    },
-    "composer-scripts": {
-        "rm -rf ./assets/*": "script"
     }
 }
