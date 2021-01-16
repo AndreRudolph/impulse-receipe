@@ -9,6 +9,6 @@
         "templates/": "templates/"
     },
     "copy-from-package": {
-        "assets": "assets/"
+        "src/Resources/assets/": "assets/"
     }
 }
