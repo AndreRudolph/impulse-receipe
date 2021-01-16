@@ -4,11 +4,9 @@
 
 Please make sure that you insert the following lines at the end to your services.yaml file!
 
-    <bg=green>                                                         </>
     App\UI\Components\:
         resource: '../src/UI/Components'
         public: true
         shared: false
         tags:
             - { name: 'impulse.components', label: 'app', priority: 0 }
-    <bg=green>                                                         </>

@@ -5,8 +5,10 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
-        "resources/": "resources/",
         "src/": "%SRC_DIR%/",
         "templates/": "templates/"
+    },
+    "copy-from-package": {
+        "assets": "assets/"
     }
 }

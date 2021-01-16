@@ -4,37 +4,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Application</title>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/underscore@1.12.0/underscore-min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Varela+Round|Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900%7COpen+Sans:400" rel="stylesheet">
 
+    {% block stylesheet %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
 
-    <script type="text/javascript" src="{{ asset('bundles/impulse/js/Config.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('bundles/impulse/js/impulse-components.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/app-components.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('bundles/impulse/js/impulse-core.js') }}"></script>
-
-{#    <link rel="stylesheet" href="{{ asset('bundles/impulse/css/impulse-theme.css') }}" />#}
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
-
-
-    <script type="text/javascript">
-        jQuery(function () {
-            window.onerror = function(msg) {
-                alert("The following error occured: \n\n" + msg);
-            };
-
-            ImpulseConfig.set('baseUrl', '{{ url("_impulse_index") }}');
-            var app = new App();
-            var requestHandler = app.run();
-
-            requestHandler.handleInitialResponse({{ jsResponse|json_encode|raw }});
-        });
-    </script>
 </head>
-<body id="{{ jsResponse.impulse.page.uid }}">
+<body
+        id='{{ jsResponse.impulse.page.uid }}'
+        data-impulse-base-url='{{ url("_impulse_index") }}'
+        data-impulse-response='{{ jsResponse|json_encode|raw }}'
+>
 
 </body>
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+{% endblock %}
 </html>
