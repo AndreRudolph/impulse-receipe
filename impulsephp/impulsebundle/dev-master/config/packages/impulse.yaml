@@ -7,3 +7,7 @@ impulse:
     # It is recommended to define this length at least with 5. Be aware that a very high
     # id length result in a higher traffic for each request.
     idLength: 5
+
+    components:
+        lookups:
+            - { path: '%kernel.project_dir%/src/UI/Components', namespace: 'App\UI\Components\', label: 'app', priority: 0 }
