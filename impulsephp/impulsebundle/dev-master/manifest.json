@@ -11,5 +11,8 @@
     },
     "copy-from-package": {
         "src/Resources/assets/": "assets/"
+    },
+    "composer-scripts": {
+        "cache:clear": "symfony-cmd"
     }
 }
