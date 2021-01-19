@@ -7,7 +7,7 @@
         "config/": "%CONFIG_DIR%/",
         "src/": "%SRC_DIR%/",
         "templates/": "templates/",
-        "webpack.config.js": "webpack.config.js"
+        "webpack_impulse.config.js": "webpack_impulse.config.js"
     },
     "copy-from-package": {
         "src/Resources/assets/": "assets/"
