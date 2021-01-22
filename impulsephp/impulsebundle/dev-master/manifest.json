@@ -3,14 +3,12 @@
     "bundles": {
         "Impulse\\ImpulseBundle\\ImpulseBundle": ["all"]
     },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/",
-        "src/": "%SRC_DIR%/",
-        "templates/": "templates/",
-        "webpack_impulse.config.js": "webpack_impulse.config.js"
-    },
     "copy-from-package": {
-        "src/Resources/assets/": "assets/"
+        "src/Resources/config/packages/": "%CONFIG_DIR%/packages/",
+        "src/Resources/assets/": "assets/",
+        "src/Resources/skeleton/installation/src/": "%SRC_DIR%/",
+        "src/Resources/skeleton/installation/templates/": "templates/",
+        "webpack_impulse.config.js": "webpack_impulse.config.js"
     },
     "composer-scripts": {
         "cache:clear": "symfony-cmd"
