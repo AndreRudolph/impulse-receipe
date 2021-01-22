@@ -8,7 +8,7 @@
         "src/Resources/assets/": "assets/",
         "src/Resources/skeleton/installation/src/": "%SRC_DIR%/",
         "src/Resources/skeleton/installation/templates/": "templates/",
-        "webpack_impulse.config.js": "webpack_impulse.config.js"
+        "src/Resources/skeleton/installation/webpack_impulse.config.js": "webpack_impulse.config.js"
     },
     "composer-scripts": {
         "cache:clear": "symfony-cmd"
