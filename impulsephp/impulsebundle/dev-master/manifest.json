@@ -5,6 +5,7 @@
     },
     "copy-from-package": {
         "src/Resources/config/packages/": "%CONFIG_DIR%/packages/",
+        "src/Resources/config/routes/": "%CONFIG_DIR%/routes/",
         "src/Resources/assets/": "assets/",
         "src/Resources/skeleton/installation/src/": "%SRC_DIR%/",
         "src/Resources/skeleton/installation/templates/": "templates/",
